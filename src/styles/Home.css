@@ -1,0 +1,52 @@
+.search{
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(185, 185, 188);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    text-indent: 0.3rem;
+    border: none;
+
+
+}
+.inputContainer{
+    width: 40%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    padding:  0 0.3rem;
+    border-radius: 0.3rem;
+}
+.input:focus{
+    outline: none;
+}
+.cards{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.pagination{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3rem;
+    box-shadow: rgba(0,0,0,0.35) 5px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    z-index: 1000;
+    background-color: white;
+    gap: 3rem;
+}
