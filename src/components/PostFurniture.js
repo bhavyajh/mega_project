@@ -3,6 +3,7 @@ import "../styles/PostFurniture.css";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import defaultimage from "../image/noimg.png";
 import axios from "axios";
+import { Link } from "@mui/material";
 const PostFurniture = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
@@ -153,31 +154,34 @@ const PostFurniture = () => {
   const post = (e) => {
     e.preventDefault();
     let form = new FormData();
-   form.append("Name",name)
-   form.append("FurnitureType",type)
-   form.append("Description",description)
-   form.append("Price",price)
-   form.append("ImgFile1","bhavya1")
-   form.append("ImgFile2","bhavya2")
-   form.append("ImgFile3","bhavya3")
-   form.append("ImgFile4","bhavya4")
-   form.append("FurnitureImg1File",img1.imageFile)
-   form.append("FurnitureImg2File",img2.imageFile)
-   form.append("FurnitureImg3File",img3.imageFile)
-   form.append("FurnitureImg4File",img4.imageFile)
- 
+    form.append("Name", name);
+    form.append("FurnitureType", type);
+    form.append("Description", description);
+    form.append("Price", price);
+    form.append("ImgFile1", "bhavya1");
+    form.append("ImgFile2", "bhavya2");
+    form.append("ImgFile3", "bhavya3");
+    form.append("ImgFile4", "bhavya4");
+    form.append("FurnitureImg1File", img1.imageFile);
+    form.append("FurnitureImg2File", img2.imageFile);
+    form.append("FurnitureImg3File", img3.imageFile);
+    form.append("FurnitureImg4File", img4.imageFile);
 
-   axios.post("https://localhost:7074/api/Furniture",form).then(()=>{
-    alert("done")
-   }).catch((err)=>{
-    alert(err.message)
-   })
+    axios
+      .post("https://localhost:7074/api/Furniture", form)
+      .then(() => {
+        alert("done");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
   return (
     <div>
       <div className="postContainer">
         <form onSubmit={post} className="form">
           <h1>Post furniture</h1>
+
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -261,13 +265,16 @@ const PostFurniture = () => {
             required
           />
 
-          <button>Submit</button>
+          <Link to="/">
+            <button className="btn_pos">Post it!!</button>
+          </Link>
         </form>
+
         <div>
-            <img width="200" height="200" src={img1.imageSrc} alt=""/>
-            <img width="200" height="200"src={img2.imageSrc} alt=""/>
-            <img width="200" height="200"src={img3.imageSrc} alt=""/>
-            <img width="200" height="200"src={img4.imageSrc} alt=""/>
+          <img width="200" height="200" src={img1.imageSrc} alt="" />
+          <img width="200" height="200" src={img2.imageSrc} alt="" />
+          <img width="200" height="200" src={img3.imageSrc} alt="" />
+          <img width="200" height="200" src={img4.imageSrc} alt="" />
         </div>
       </div>
     </div>

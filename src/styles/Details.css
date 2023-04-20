@@ -1,0 +1,28 @@
+.continue_butt{
+
+
+        background-color: #0b6efd;
+  
+        color: #FFFFFF;
+     
+        width: 380px;
+      
+        height: 50px;
+    
+        border-radius: 0.5rem;
+     
+        font-weight: 600;
+    
+        font-size: 1.5rem;
+   
+        align-items: center;
+    
+        transform: scale(1.05);
+     
+        transition-duration: 150ms;
+      
+      
+
+
+}
+
