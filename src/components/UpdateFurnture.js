@@ -5,9 +5,11 @@ import defaultimage from "../image/noimg.png";
 import axios from "./axios";
 import { Link } from "@mui/material";
 import { useMyDataContext } from "../context/DataContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const PostFurniture = () => {
+const  UpdateFurniture = () => {
+
+    const {id}=useParams()
   const [name, setName] = useState("");
   const [type, setType] = useState("");
 const navigate=useNavigate()
@@ -178,7 +180,7 @@ navigate("/home")
     form.append("FurnitureImg4File", img4.imageFile);
 
     axios
-      .post("/api/Furniture", form)
+      .put(`/api/Furniture/${id}`, form)
       .then(() => {
         alert("done");
       })
@@ -190,7 +192,7 @@ navigate("/home")
     <div>
       <div className="postContainer">
         <form onSubmit={post} className="form">
-          <h1>Post furniture</h1>
+          <h1>update furniture</h1>
 
           <input
             value={name}
@@ -276,7 +278,7 @@ navigate("/home")
           />
 
           <Link to="/">
-            <button className="btn_pos">Post it!!</button>
+            <button className="btn_pos">Update it!!</button>
           </Link>
         </form>
 
@@ -291,4 +293,4 @@ navigate("/home")
   );
 };
 
-export default PostFurniture;
+export default UpdateFurniture;

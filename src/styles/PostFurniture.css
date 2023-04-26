@@ -20,7 +20,7 @@
     gap: 2rem;
 }
 h1{
-    color:purple;
+    color:#0b6efd;
 }
 .form > input,form>select{
     width: 80%;
@@ -82,7 +82,7 @@ label{
 
 
 
-    --color: #560bad;
+    --color: #0b6efd;
     font-family: inherit;
     display: inline-block;
     width: 8em;
@@ -126,6 +126,8 @@ label{
    }
    
    .btn_pos:active:before {
-    background: #3a0ca3;
+    background: #0b6efd;
     transition: background 0s;
    }
+ 
+

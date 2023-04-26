@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import "../src/styles/HomeOne.css"
+import Login from './components/Login'
 
 
 const HomeOne = () => {
@@ -8,8 +9,8 @@ const HomeOne = () => {
       <div className='submain'>
         <h1 className='title'>Welcome to F-cart</h1>
         <div className='vivu'>
-          <Link to="/post"><button className='post_fur'>Post Furniture</button></Link>
-          <Link to="/home"><button className='shop_fur'>Shop Furniture</button></Link>
+          <Link to="/signin"><button className='post_fur'>Sign In</button></Link>
+          <Link to="/signup"><button className='shop_fur'>Sign Up</button></Link>
         </div>
       </div>
     </div>
